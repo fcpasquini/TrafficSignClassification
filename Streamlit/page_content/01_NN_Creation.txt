@@ -1,0 +1,66 @@
+
+<h1> Summary </h1>
+
+<p>In this project, I created a Convolutional Neural Network, capable of identifying if a given image contains a traffic sign of one of 43 classes. The possible classes can be seen in the page 'Traffic Sign Classes'.</p>
+
+<p>There are a total of 43 possible classes. The data was previously splitted between train, test and validation, and shared by the instructor of the Udemy course 'Machine Learning Practical Workout | 8 Real-World Projects', based on the dataset provided by the 'Federal Ministry of Education and Research', which can be accessed in the link <a href='https://benchmark.ini.rub.de/gtsrb_dataset.html'>'https://benchmark.ini.rub.de/gtsrb_dataset.html'</a>. </p>
+
+<p>Each dataset was stored in a pickle file, containing the following data:</p>
+
+<li> Coords: The coordinates of the location of the traffic sign;</p>
+
+<li> Labels: The target of the image, which can be one of the 43 classes of different german traffic signs;</p>
+
+<li> Features: The image in an array format, divided by the three color layers in a 256 RGB, and in a dimension of (32x32);</p>
+
+<li> Sizes: The size, in pixels, of the traffic sign, to allow the creation of an outline box of the traffic sign.</p>
+
+<p>For the creation of our model, it was used only the data from the Features (x axis) and the Labels (y axis). By using the features array, we can easily view the original image, by using the matplotlib.pyplot.imshow method.</p>
+
+<p>The final model selected was a Convolutional Neural Network, with two kernels and two Average Poolings, which were then flattened and inserted in a neural network with two dense layers and an output layer for each of the 43 classes.</p>
+
+<p>The model was then trained using the training dataset and validated with the validation dataset.</p>
+
+<h1>Architecture of the Convolutional Neural Network</h1>
+
+<p>A Convolutional Neural Network is a type of Neural Network that uses the Convolution technique to solve the following problems:<p/>
+
+<li>The number of pixels in an image is very high for a Neural Network and, if provided entirely for the Network, would produce an immense amount of weights and calculations that would not improve the model in an efficient way. So, the Convolution compress the features of the image in a smaller array that conserves the most important ones;</li>
+
+<li>Opposed to commonly used structured data, pixels in images have a high correlation with the pixels locally close to them. Convoluted arrays conserve the correlation of locally close pixels. So, by convoluting the data, we can conserve this correlation in an easy way to provide for the Neural Network;</li>
+
+<li>The same feature of an image can appear in different ways, like rotated or enlarged, which would not be identified by a common Neural Network. By using the convolution technique, the convoluted array is capable of be matched to an image with different scales and rotations than the trained images.</li>
+
+<p>Given these attributes, the final design of the Convolutional Neural Network was as follow:</p>
+
+<li>A 2D Convolutional layer (Conv2D), with 6 filters, kernel size of 5x5, with a relu activation function and an input shape of 32x32x1;</li>
+
+<li>A 2D Average Pooling layer;</li>
+
+<li>A 2D Convolutional layer (Conv2D), with 16 filters, kernel size of 5x5, with a relu activation function;</li>
+
+<li>A 2D Average Pooling layer;</li>
+
+<li>A Flatten layer, to queue all the pixels;</li>
+
+<li>A dense layer with 120 neurons and a relu activation function</li>
+
+<li>A dense layer with 84 neurons and a relu activation function</li>
+
+<li>An output layer with 43 neurons and a softmax activation function, which outputs the prediction of the class of the image</li>
+
+<h1>Training of the Convolutional Neural Network</h1>
+
+<p>The Neural Network was trained using the train dataset, which contains 34,799 images. The hyperparameters used were:
+
+<li>Loss function: 'sparse_categorical_crossentropy';</li>
+
+<li>Optimizer: Adam, with a Learning rate of 0.001</li>
+
+<li>Epochs: 20</li>
+
+<li>Batch size: 500</li>
+
+<p>After the training, the accuracy for training and validation data were 97.92% and 84.92%, respectively.</p>
+
+

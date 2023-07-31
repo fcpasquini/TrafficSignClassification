@@ -1,0 +1,7 @@
+<h2>Acknowledgments of the project</h2>
+
+<li><a href='https://www.udemy.com/course/deep-learning-machine-learning-practical/'>Udemy Course: Machine Learning Practical Workout | 8 Real-World Projects</a></li>
+
+<li><a href='https://benchmark.ini.rub.de/gtsrb_dataset.html'>Institut fur Neuroinformatik</a></li>
+
+<li><a href='https://benchmark.ini.rub.de/gtsrb_dataset.html'>federal ministry of education and research</a></li>

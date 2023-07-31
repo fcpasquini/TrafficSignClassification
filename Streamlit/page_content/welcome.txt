@@ -1,0 +1,21 @@
+<h2>Welcome to the project of Traffic Sign Classification</h2>
+
+<h3>Author: Fabio Cardoso Pasquini</h3>
+
+<p>This project is based on the Udemy course <b>'Machine Learning Practical Workout | 8 Real-World Projects'</b>, especifically the <b>project 5 - 'Le-NET Deep Network - Traffic Sign Classification'</b>.</p>
+
+<p>The objective of this project is to deploy a Convolutional Neural Network that I created, so any user can try out my model to predict its own images of traffic signs.</p>
+
+<p>The project is divided in the following pages:</p>
+
+<li> <b>Neural Network Creation:</b> This page shows the steps I followed to be able to create my Convolutional Neural Network, train it and refine its parameters and architecture;</li>
+
+<li> <b>Sign Classes Examples:</b> This page shows one example for each of the 43 classes contained in the dataset;</li>
+
+<li> <b>Classify Your Image:</b> This page allows the user to upload an image from its computer, to try out if the model is going to be able to predict new images to which it was not trained on;</li>
+
+<li> <b>Acknowledgments:</b> This page shows all the links, people and organizations that influenced the creation of this project.</li>
+
+<br>
+
+
